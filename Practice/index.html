@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State Driven Counter</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col items-center justify-center p-6">
+
+    <div class="w-full max-w-md bg-gray-800 p-6 rounded-2xl shadow-xl border border-gray-700 space-y-6">
+        <h1 id="counter-text" class="text-3xl font-bold text-center tracking-wide text-emerald-400">
+            Counter: 0
+        </h1>
+
+        <div id="all-buttons" class="grid grid-cols-3 gap-3">
+            <button id="btn-add" class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-2.5 px-4 rounded-xl shadow transition duration-200 cursor-pointer">
+                Add +1
+            </button>
+            <button id="btn-sub" class="bg-rose-600 hover:bg-rose-500 text-white font-semibold py-2.5 px-4 rounded-xl shadow transition duration-200 cursor-pointer">
+                Sub -1
+            </button>
+            <button id="btn-reset" class="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2.5 px-4 rounded-xl shadow transition duration-200 cursor-pointer">
+                Reset
+            </button>
+        </div>
+
+        <hr class="border-gray-700">
+
+        <div class="space-y-3">
+            <h2 class="text-sm font-semibold tracking-wider text-gray-400 uppercase">
+                Change History Log
+            </h2>
+            <ul id="log-list" class="space-y-2 max-h-48 overflow-y-auto pr-1 text-sm">
+                </ul>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
